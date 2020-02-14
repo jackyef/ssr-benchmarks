@@ -43,7 +43,7 @@ const benchmark = () => {
   for (let i = 0; i < 30; i += 1) {
     const start = process.hrtime();
 
-    // this renders around 9000 divs
+    // this renders around 64472 divs
     const markup = renderToString(<RecursiveDivs depth={5} breadth={11} />);
     time.push(process.hrtime(start));
 

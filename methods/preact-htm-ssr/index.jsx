@@ -1,5 +1,7 @@
-import React from "react";
-import { renderToString } from "react-dom/server";
+/** @jsx Preact.h */
+
+import Preact from "preact";
+import renderToString from "preact-render-to-string";
 
 const RecursiveDivs = ({ depth = 1, breadth = 1 }) => {
   if (depth <= 0) {
@@ -58,7 +60,7 @@ const benchmark = () => {
   });
   
   console.info("================ SUMMARY ================");
-  console.info("[react-htm-ssr]");
+  console.info("[preact-htm-ssr]");
   console.info(
     "Average is:",
     durations.reduce((a, b) => a + b) / durations.length,

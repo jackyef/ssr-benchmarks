@@ -38,7 +38,7 @@ const warmUpV8 = () => {
 const benchmark = () => {
   let time = [];
 
-  for (let i = 0; i < 10; i += 1) {
+  for (let i = 0; i < 30; i += 1) {
     const start = process.hrtime();
 
     // this renders around 9000 divs
@@ -53,13 +53,18 @@ const benchmark = () => {
   durations.forEach((d, i) => {
     console.info(`Run ${i} took `, d, "ms");
   });
-
+  
+  console.info("================ SUMMARY ================");
   console.info(
     "Average is:",
     durations.reduce((a, b) => a + b) / durations.length,
     "ms"
   );
-  console.info("================ RESULT ================");
+  console.info(
+    "Stdev is:",
+    require('node-stdev').population(durations),
+    "ms"
+  );
 };
 
 warmUpV8();

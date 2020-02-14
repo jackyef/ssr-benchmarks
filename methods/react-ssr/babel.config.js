@@ -20,6 +20,8 @@ module.exports =  {
     '@babel/plugin-syntax-dynamic-import',
     ['@babel/plugin-transform-destructuring', { useBuiltIns: true }],
     ['@babel/plugin-transform-runtime', { helpers: false, regenerator: true }],
+    '@babel/plugin-transform-react-constant-elements',
+    '@babel/plugin-transform-react-inline-elements',
   ].filter(Boolean),
   env: {
     production: {

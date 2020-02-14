@@ -118,6 +118,68 @@ importers:
       preact: ^10.3.1
       preact-render-to-string: ^5.1.4
       webpack: ^4.41.6
+  methods/react-htm-ssr:
+    dependencies:
+      node-stdev: 1.0.1
+    devDependencies:
+      '@babel/cli': 7.8.4_@babel+core@7.8.4
+      '@babel/core': 7.8.4
+      '@babel/plugin-proposal-class-properties': 7.8.3_@babel+core@7.8.4
+      '@babel/plugin-proposal-decorators': 7.8.3_@babel+core@7.8.4
+      '@babel/plugin-proposal-export-default-from': 7.8.3_@babel+core@7.8.4
+      '@babel/plugin-proposal-export-namespace-from': 7.8.3_@babel+core@7.8.4
+      '@babel/plugin-proposal-nullish-coalescing-operator': 7.8.3_@babel+core@7.8.4
+      '@babel/plugin-proposal-object-rest-spread': 7.8.3_@babel+core@7.8.4
+      '@babel/plugin-proposal-optional-chaining': 7.8.3_@babel+core@7.8.4
+      '@babel/plugin-syntax-async-generators': 7.8.4_@babel+core@7.8.4
+      '@babel/plugin-syntax-dynamic-import': 7.8.3_@babel+core@7.8.4
+      '@babel/plugin-transform-destructuring': 7.8.3_@babel+core@7.8.4
+      '@babel/plugin-transform-react-constant-elements': 7.8.3_@babel+core@7.8.4
+      '@babel/plugin-transform-react-inline-elements': 7.8.3_@babel+core@7.8.4
+      '@babel/plugin-transform-runtime': 7.8.3_@babel+core@7.8.4
+      '@babel/preset-env': 7.8.4_@babel+core@7.8.4
+      '@babel/preset-react': 7.8.3_@babel+core@7.8.4
+      babel-eslint: 10.0.3_eslint@6.8.0
+      babel-plugin-macros: 2.8.0
+      babel-plugin-transform-jsx-to-htm: 2.0.0_@babel+core@7.8.4
+      eslint: 6.8.0
+      eslint-plugin-import: 2.20.1_eslint@6.8.0
+      eslint-plugin-react: 7.18.3_eslint@6.8.0
+      eslint-plugin-react-hooks: 2.3.0_eslint@6.8.0
+      htm: 3.0.3
+      react: 16.12.0
+      react-dom: 16.12.0_react@16.12.0
+      webpack: 4.41.6_webpack@4.41.6
+    specifiers:
+      '@babel/cli': ^7.8.4
+      '@babel/core': ^7.8.4
+      '@babel/plugin-proposal-class-properties': ^7.8.3
+      '@babel/plugin-proposal-decorators': ^7.8.3
+      '@babel/plugin-proposal-export-default-from': ^7.8.3
+      '@babel/plugin-proposal-export-namespace-from': ^7.8.3
+      '@babel/plugin-proposal-nullish-coalescing-operator': ^7.8.3
+      '@babel/plugin-proposal-object-rest-spread': ^7.8.3
+      '@babel/plugin-proposal-optional-chaining': ^7.8.3
+      '@babel/plugin-syntax-async-generators': ^7.8.4
+      '@babel/plugin-syntax-dynamic-import': ^7.8.3
+      '@babel/plugin-transform-destructuring': ^7.8.3
+      '@babel/plugin-transform-react-constant-elements': ^7.8.3
+      '@babel/plugin-transform-react-inline-elements': ^7.8.3
+      '@babel/plugin-transform-runtime': ^7.8.3
+      '@babel/preset-env': ^7.8.4
+      '@babel/preset-react': ^7.8.3
+      babel-eslint: ^10.0.3
+      babel-plugin-macros: ^2.8.0
+      babel-plugin-transform-jsx-to-htm: ^2.0.0
+      eslint: ^6.8.0
+      eslint-plugin-import: ^2.20.1
+      eslint-plugin-react: ^7.18.3
+      eslint-plugin-react-hooks: ^2.3.0
+      htm: ^3.0.3
+      node-stdev: ^1.0.1
+      react: ^16.12.0
+      react-dom: ^16.12.0
+      webpack: ^4.41.6
   methods/react-ssr:
     dependencies:
       node-stdev: 1.0.1
@@ -1513,6 +1575,15 @@ packages:
     dev: true
     resolution:
       integrity: sha512-SEP5kJpfGYqYKpBrj5XU3ahw5p5GOHJ0U5ssOSQ/WBVdwkD2Dzlce95exQTs3jOVWPPKLBN2rlEWkCK7dSmLvg==
+  /babel-plugin-transform-jsx-to-htm/2.0.0_@babel+core@7.8.4:
+    dependencies:
+      '@babel/plugin-syntax-jsx': 7.8.3_@babel+core@7.8.4
+      htm: 3.0.3
+    dev: true
+    peerDependencies:
+      '@babel/core': '*'
+    resolution:
+      integrity: sha512-MuU/RfaTh2i1ar5iiOoce6F263jIHsXjN7SLrm9G80PKHOFZJSfq2F5hAHduVK4dMwA6xeSKK541Ho3LGb5lIg==
   /balanced-match/1.0.0:
     dev: true
     resolution:
@@ -2718,6 +2789,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-kssjab8CvdXfcXMXVcvsXum4Hwdq9XGtRD3TteMEvEbq0LXyiNQr6AprqKqfeaDXze7SxWvRxdpwE6ku7ikLkg==
+  /htm/3.0.3:
+    dev: true
+    resolution:
+      integrity: sha512-+LZu7FSZJNo/mGhF5zOgyLdcYTQ8brOqwJFXwP/F/Q9IyvBp3HcYT1tk5A6rf67NEW0VEV+2Y8O4pMGmBIci/w==
   /https-browserify/1.0.0:
     dev: true
     resolution:

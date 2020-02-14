@@ -29,7 +29,7 @@ const warmUpV8 = () => {
   console.info("Warming up...");
 
   for (let i = 0; i < 20; i += 1) {
-    renderToString(<RecursiveDivs depth={4} breadth={11} />);
+    renderToString(<RecursiveDivs depth={5} breadth={11} />);
   }
 
   console.info("Finished warming up!");
@@ -42,7 +42,7 @@ const benchmark = () => {
     const start = process.hrtime();
 
     // this renders around 9000 divs
-    const markup = renderToString(<RecursiveDivs depth={4} breadth={11} />);
+    const markup = renderToString(<RecursiveDivs depth={5} breadth={11} />);
     
     time.push(process.hrtime(start));
 

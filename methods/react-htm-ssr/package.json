@@ -1,7 +1,7 @@
 {
-  "name": "preact-ssr",
+  "name": "react-htm-ssr",
   "scripts": {
-    "build": "babel index.jsx -d dist --extensions '.js,.jsx'",
+    "build": "babel index.jsx -d dist --extensions '.js,.jsx' --config-file ./babel-htm.config.js && babel dist/index.js -d dist --extensions '.js,.jsx'",
     "bench": "NODE_ENV=production node dist/index.js"
   },
   "devDependencies": {
@@ -22,15 +22,16 @@
     "@babel/plugin-transform-runtime": "^7.8.3",
     "@babel/preset-env": "^7.8.4",
     "@babel/preset-react": "^7.8.3",
-    "@babel/plugin-transform-react-jsx": "^7.8.3",
     "babel-eslint": "^10.0.3",
     "babel-plugin-macros": "^2.8.0",
+    "babel-plugin-transform-jsx-to-htm": "^2.0.0",
     "eslint": "^6.8.0",
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-react": "^7.18.3",
     "eslint-plugin-react-hooks": "^2.3.0",
-    "preact": "^10.3.1",
-    "preact-render-to-string": "^5.1.4",
+    "htm": "^3.0.3",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
     "webpack": "^4.41.6"
   },
   "dependencies": {

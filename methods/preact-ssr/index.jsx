@@ -1,5 +1,7 @@
-import React from "react";
-import { renderToString } from "react-dom/server";
+/** @jsx Preact.h */
+
+import Preact from "preact";
+import renderToString from "preact-render-to-string";
 
 const RecursiveDivs = ({ depth = 1, breadth = 1 }) => {
   if (depth <= 0) {
@@ -43,11 +45,9 @@ const benchmark = () => {
 
     // this renders around 9000 divs
     const markup = renderToString(<RecursiveDivs depth={4} breadth={11} />);
-    
     time.push(process.hrtime(start));
 
     require('fs').writeFileSync('./dist/test.html', markup);
-
   }
 
   console.info("================ RESULT ================");
@@ -56,18 +56,14 @@ const benchmark = () => {
   durations.forEach((d, i) => {
     console.info(`Run ${i} took `, d, "ms");
   });
-  
+
   console.info("================ SUMMARY ================");
   console.info(
     "Average is:",
     durations.reduce((a, b) => a + b) / durations.length,
     "ms"
   );
-  console.info(
-    "Stdev is:",
-    require('node-stdev').population(durations),
-    "ms"
-  );
+  console.info("Stdev is:", require("node-stdev").population(durations), "ms");
 };
 
 warmUpV8();

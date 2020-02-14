@@ -58,6 +58,7 @@ const benchmark = () => {
   });
   
   console.info("================ SUMMARY ================");
+  console.info("[react-ssr]");
   console.info(
     "Average is:",
     durations.reduce((a, b) => a + b) / durations.length,

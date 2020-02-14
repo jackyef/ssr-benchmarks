@@ -58,6 +58,7 @@ const benchmark = () => {
   });
 
   console.info("================ SUMMARY ================");
+  console.info("[preact-ssr]");
   console.info(
     "Average is:",
     durations.reduce((a, b) => a + b) / durations.length,

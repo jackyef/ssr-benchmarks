@@ -10,7 +10,7 @@ Benchmarks of various approaches to SSR:
 - ✅ react-esx-ssr (using `esx-js`) 
 - ✅ lithtml-ssr (using [`@popeindustries/lit-html-server`](https://github.com/popeindustries/lit-html-server))
 - ✅ svelte-ssr
-- ❌ vue-ssr
+- ⚠️ vue-ssr (the numbers seem very out-of-place, I might have implemented it wrongly. If you know about vue, please consider helping by taking a look at `methods/vue-ssr` implementation)
 - Give me your ideas on what we should include in this benchmark! You can contribute directly, or just open an issue and name the approach you want to benchmark.
 
 ## Setup

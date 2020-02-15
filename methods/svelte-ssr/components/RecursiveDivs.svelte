@@ -11,7 +11,7 @@
   <div>abcdefghij</div>
 {:else}
   <div on:click={handleClick}>
-    {#each Array(breadth) as _, index}
+    {#each Array(breadth) as _}
       <svelte:self depth={depth - 1} breadth={breadth - 1} />
     {/each}
   </div>

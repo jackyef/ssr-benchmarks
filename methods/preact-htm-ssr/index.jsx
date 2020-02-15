@@ -1,4 +1,5 @@
 /** @jsx Preact.h */
+const methodName = 'preact-htm-ssr';
 
 import Preact from "preact";
 import renderToString from "preact-render-to-string";
@@ -60,17 +61,19 @@ const benchmark = () => {
   });
   
   console.info("================ SUMMARY ================");
-  console.info("[preact-htm-ssr]");
+  console.info(`[${methodName}]`);
   console.info(
     "Average is:",
     durations.reduce((a, b) => a + b) / durations.length,
     "ms"
   );
-  console.info(
-    "Stdev is:",
-    require('node-stdev').population(durations),
-    "ms"
-  );
+  console.info("Stdev is:", require("node-stdev").population(durations), "ms");
+
+  require('fs').writeFileSync("./dist/result.json", JSON.stringify({
+    name: methodName,
+    average: durations.reduce((a, b) => a + b) / durations.length,
+    stdev: require("node-stdev").population(durations),
+  }));
 };
 
 warmUpV8();

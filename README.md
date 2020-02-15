@@ -1,12 +1,16 @@
 # ssr-benchmarks
 
+> Want to see the results? Go straight to [result.md](./result.md)
+
 Benchmarks of various approaches to SSR:
 - ✅ react-ssr (using `react-dom`)
 - ✅ preact-ssr (using `preact-render-to-string`)
 - ✅ react-htm-ssr (using `react-dom` after transforming JSX to `htm` tagged template literals)
 - ✅ preact-htm-ssr (using `preact-render-to-string` after transforming JSX to `htm` tagged template literals)
 - ✅ react-esx-ssr (using `esx-js`) 
-- ❌ lithtml-ssr (using [`@popeindustries/lit-html-server`](https://github.com/popeindustries/lit-html-server))
+- ✅ lithtml-ssr (using [`@popeindustries/lit-html-server`](https://github.com/popeindustries/lit-html-server))
+- ❌ svelte-ssr
+- ❌ vue-ssr
 - Give me your ideas on what we should include in this benchmark! You can contribute directly, or just open an issue and name the approach you want to benchmark.
 
 ## Setup
@@ -29,6 +33,8 @@ pnpm install
 pnpm run build:all
 pnpm run bench:all
 ```
+
+Result is outputted to `result.md`
 
 ## The benchmark
 The benchmark tests various approaches to see how long it takes for each to render around 64000 divs on the server side. Basically it goes like this:

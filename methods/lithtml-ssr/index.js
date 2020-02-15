@@ -1,5 +1,7 @@
 const { html, renderToString } = require("@popeindustries/lit-html-server");
 
+const methodName = 'lithtml-ssr';
+
 const RecursiveDivs = ({ depth = 1, breadth = 1 }) => {
   if (depth <= 0) {
     return html`
@@ -56,13 +58,19 @@ const benchmark = async () => {
   });
 
   console.info("================ SUMMARY ================");
-  console.info("[lithtml-ssr]");
+  console.info(`[${methodName}]`);
   console.info(
     "Average is:",
     durations.reduce((a, b) => a + b) / durations.length,
     "ms"
   );
   console.info("Stdev is:", require("node-stdev").population(durations), "ms");
+
+  require('fs').writeFileSync("./dist/result.json", JSON.stringify({
+    name: methodName,
+    average: durations.reduce((a, b) => a + b) / durations.length,
+    stdev: require("node-stdev").population(durations),
+  }));
 };
 
 warmUpV8();

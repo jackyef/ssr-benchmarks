@@ -1,3 +1,5 @@
+const methodName = 'react-htm-ssr';
+
 import React from "react";
 import { renderToString } from "react-dom/server";
 
@@ -58,17 +60,19 @@ const benchmark = () => {
   });
   
   console.info("================ SUMMARY ================");
-  console.info("[react-htm-ssr]");
+  console.info(`[${methodName}]`);
   console.info(
     "Average is:",
     durations.reduce((a, b) => a + b) / durations.length,
     "ms"
   );
-  console.info(
-    "Stdev is:",
-    require('node-stdev').population(durations),
-    "ms"
-  );
+  console.info("Stdev is:", require("node-stdev").population(durations), "ms");
+
+  require('fs').writeFileSync("./dist/result.json", JSON.stringify({
+    name: methodName,
+    average: durations.reduce((a, b) => a + b) / durations.length,
+    stdev: require("node-stdev").population(durations),
+  }));
 };
 
 warmUpV8();

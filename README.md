@@ -5,8 +5,8 @@ Benchmarks of various approaches to SSR:
 - ✅ preact-ssr (using `preact-render-to-string`)
 - ✅ react-htm-ssr (using `react-dom` after transforming JSX to `htm` tagged template literals)
 - ✅ preact-htm-ssr (using `preact-render-to-string` after transforming JSX to `htm` tagged template literals)
-- ❌ react-esx-ssr (using `esx-js`) 
-- ❌ lithtml-ssr (using [`@popesindustry/lit-html-server`](https://github.com/popeindustries/lit-html-server))
+- ✅ react-esx-ssr (using `esx-js`) 
+- ❌ lithtml-ssr (using [`@popeindustries/lit-html-server`](https://github.com/popeindustries/lit-html-server))
 - Give me your ideas on what we should include in this benchmark! You can contribute directly, or just open an issue and name the approach you want to benchmark.
 
 ## Setup

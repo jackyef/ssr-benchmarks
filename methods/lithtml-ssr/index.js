@@ -26,11 +26,11 @@ const RecursiveDivs = ({ depth = 1, breadth = 1 }) => {
   `;
 };
 
-const warmUpV8 = () => {
+const warmUpV8 = async () => {
   console.info("Warming up...");
 
   for (let i = 0; i < 20; i += 1) {
-    renderToString(RecursiveDivs({ depth: 5, breadth: 11 }));
+    await renderToString(RecursiveDivs({ depth: 5, breadth: 11 }));
   }
 
   console.info("Finished warming up!");
@@ -73,5 +73,7 @@ const benchmark = async () => {
   }));
 };
 
-warmUpV8();
-benchmark();
+(async () => {
+  await warmUpV8();
+  await benchmark();
+})();

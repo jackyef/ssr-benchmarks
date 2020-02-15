@@ -13,6 +13,6 @@
   <div on:click={handleClick}>
     {#each Array(breadth) as _, index}
       <svelte:self depth={depth - 1} breadth={breadth - 1} />
-    {/each}}
+    {/each}
   </div>
 {/if}

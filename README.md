@@ -13,8 +13,8 @@ Benchmarks of various approaches to SSR:
 - ⚠️ vue-ssr (the numbers seem very out-of-place, I might have implemented it wrongly. If you know about vue, please consider helping by taking a look at `methods/vue-ssr` implementation)
 - ✅ [vhtml](https://github.com/developit/vhtml) 
 - ✅ vhtml-htm
+- ✅ vanilla-function (plain old javascript function)
 - ❌ ejs
-- ❌ plain old javascript function
 - Give me your ideas on what we should include in this benchmark! You can contribute directly, or just open an issue and name the approach you want to benchmark.
 
 ## Setup

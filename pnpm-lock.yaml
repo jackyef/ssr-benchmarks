@@ -378,6 +378,11 @@ importers:
       rollup-plugin-delete: ^1.2.0
       rollup-plugin-svelte: ^5.1.1
       svelte: ^3.18.2
+  methods/vanilla-function:
+    dependencies:
+      node-stdev: 1.0.1
+    specifiers:
+      node-stdev: ^1.0.1
   methods/vhtml:
     dependencies:
       node-stdev: 1.0.1

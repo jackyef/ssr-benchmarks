@@ -4,6 +4,14 @@ importers:
       chalk: 3.0.0
     specifiers:
       chalk: ^3.0.0
+  methods/ejs:
+    dependencies:
+      node-stdev: 1.0.1
+    devDependencies:
+      ejs: 3.0.1
+    specifiers:
+      ejs: ^3.0.1
+      node-stdev: ^1.0.1
   methods/lithtml-ssr:
     dependencies:
       '@popeindustries/lit-html-server': 2.0.0
@@ -2692,6 +2700,13 @@ packages:
     dev: true
     resolution:
       integrity: sha512-07z8uv2wMyS51kKhD1KsdXJg5WQ6t93RneqRxUHnskXVtlYYkLqM0gqStQZ3pj073g687jPCHrqNfCzawLYh5g==
+  /ejs/3.0.1:
+    dev: true
+    engines:
+      node: '>=0.10.0'
+    requiresBuild: true
+    resolution:
+      integrity: sha512-cuIMtJwxvzumSAkqaaoGY/L6Fc/t6YvoP9/VIaK0V/CyqKLEQ8sqODmYfy/cjXEdZ9+OOL8TecbJu+1RsofGDw==
   /electron-to-chromium/1.3.351:
     dev: true
     resolution:

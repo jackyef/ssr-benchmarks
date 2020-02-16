@@ -1,0 +1,9 @@
+<% if (depth <= 0) { %>
+  <div>abcdefghij</div>
+<% } else { %>
+  <div>
+    <% for (let i = 0; i < breadth; i += 1) {%>
+      <%- include(filePath, { depth: depth - 1, breadth: breadth - 1, filePath: filePath }) %>
+    <% } %>
+  </div>
+<% } %>

@@ -14,7 +14,7 @@ Benchmarks of various approaches to SSR:
 - ✅ [vhtml](https://github.com/developit/vhtml) 
 - ✅ vhtml-htm
 - ✅ vanilla-function (plain old javascript function)
-- ❌ ejs
+- ⚠️ ejs (the numbers are worse than React, either EJS has problems rendering recursive includes, or I did something wrong. If you know about ejs, please consider helping by taking a look at `methods/ejs` implementation)
 - Give me your ideas on what we should include in this benchmark! You can contribute directly, or just open an issue and name the approach you want to benchmark.
 
 ## Setup

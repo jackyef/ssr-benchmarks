@@ -22,22 +22,5 @@ module.exports =  {
     ['@babel/plugin-transform-runtime', { helpers: false, regenerator: true }],
     '@babel/plugin-transform-react-constant-elements',
     '@babel/plugin-transform-react-inline-elements',
-  ].filter(Boolean),
-  env: {
-    production: {
-      plugins: [
-        [
-          'transform-react-remove-prop-types',
-          {
-            mode: 'remove',
-            removeImport: true,
-            additionalLibraries: ['prop-types-extra'],
-            ignoreFilenames: ['node_modules'],
-          },
-        ],
-        '@babel/plugin-transform-react-constant-elements',
-        '@babel/plugin-transform-react-inline-elements',
-      ],
-    },
-  },
+  ]
 };

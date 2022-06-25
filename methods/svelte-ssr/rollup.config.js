@@ -16,9 +16,11 @@ export default [
       resolve(),
       svelte({
         dev: false,
-        immutable: true,
-        hydratable: true,
-        generate: "ssr"
+        compilerOptions: {
+          immutable: true,
+          hydratable: true,
+          generate: "ssr"
+        }
       })
     ],
     external: [

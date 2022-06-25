@@ -16,9 +16,9 @@
     "node-stdev": "^1.0.1",
     "rollup": "^1.31.1",
     "rollup-plugin-delete": "^1.2.0",
-    "rollup-plugin-svelte": "^5.1.1"
+    "rollup-plugin-svelte": "^7.1.0"
   },
   "dependencies": {
-    "svelte": "^3.18.2"
+    "svelte": "^3.48.0"
   }
 }

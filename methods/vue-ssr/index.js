@@ -1,13 +1,10 @@
-// Step 1: Create a Vue instance
-import Vue from "vue";
+import { createSSRApp } from "vue";
+import { renderToString } from 'vue/server-renderer'
+
 import App from "./components/App.vue";
 
-const renderer = require("vue-server-renderer").createRenderer();
-
 const createApp = () => {
-  const app = new Vue({
-    render: h => h(App)
-  });
+  const app = createSSRApp(App);
   
   return app;
 }
@@ -18,7 +15,7 @@ const warmUpV8 = async () => {
   console.info("Warming up...");
 
   for (let i = 0; i < 20; i += 1) {
-    await renderer.renderToString(createApp());
+    await renderToString(createApp());
   }
 
   console.info("Finished warming up!");
@@ -31,7 +28,7 @@ const benchmark = async () => {
     const start = process.hrtime();
 
     // this renders around 64472 divs
-    const markup = await renderer.renderToString(createApp());
+    const markup = await renderToString(createApp());
 
     time.push(process.hrtime(start));
 

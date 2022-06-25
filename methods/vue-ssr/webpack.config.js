@@ -1,8 +1,7 @@
 const merge = require("webpack-merge");
 const nodeExternals = require("webpack-node-externals");
 const baseConfig = require("./webpack.base.config.js");
-const VueSSRServerPlugin = require("vue-server-renderer/server-plugin");
-const VueLoaderPlugin = require("vue-loader/lib/plugin-webpack4");
+const VueLoaderPlugin = require("vue-loader/dist/pluginWebpack4").default;
 
 module.exports = merge(baseConfig, {
   // Point entry to your app's server entry file
@@ -38,7 +37,6 @@ module.exports = merge(baseConfig, {
     // This is the plugin that turns the entire output of the server build
     // into a single JSON file. The default file name will be
     // `vue-ssr-server-bundle.json`
-    // new VueSSRServerPlugin(),
     new VueLoaderPlugin()
   ]
 });

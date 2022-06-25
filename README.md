@@ -15,6 +15,7 @@ Benchmarks of various approaches to SSR:
 - ✅ vhtml-htm
 - ✅ vanilla-function (plain old javascript function)
 - ⚠️ ejs (the numbers are worse than React, either EJS has problems rendering recursive includes, or I did something wrong. If you know about ejs, please consider helping by taking a look at `methods/ejs` implementation)
+- ⚠️ solid-ssr (the numbers seems off, they should be faster than React. If you know what I am doing wrong, please consider helping by taking a look at `methods/solid-ssr` implementation)
 - Give me your ideas on what we should include in this benchmark! You can contribute directly, or just open an issue and name the approach you want to benchmark.
 
 ## Setup
@@ -54,3 +55,5 @@ The benchmark tests various approaches to see how long it takes for each to rend
 1. We warm up the v8 engine by rendering 20 times
 2. We then run the actual benchmark by rendering 30 times
 3. We collect the average time and the standard deviation
+
+Do note that the results are based on runs on my machine, which is an MBP 2020 with Intel i7 and 32GB memory.

@@ -2,7 +2,7 @@
   "name": "ejs",
   "scripts": {
     "build": "mkdir -p dist && cp index.js dist/index.js && cp RecursiveDivs.ejs dist/RecursiveDivs.ejs",
-    "bench": "NODE_ENV=production node dist/index.js"
+    "bench": "bun run dist/index.js"
   },
   "devDependencies": {
     "ejs": "^3.0.1"

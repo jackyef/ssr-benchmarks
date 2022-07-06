@@ -2,7 +2,7 @@
   "name": "preact-ssr",
   "scripts": {
     "build": "babel index.jsx -d dist --extensions '.js,.jsx'",
-    "bench": "NODE_ENV=production node dist/index.js"
+    "bench": "bun run dist/index.js"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",

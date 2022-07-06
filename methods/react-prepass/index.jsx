@@ -41,16 +41,16 @@ const benchmark = async () => {
   let time = [];
 
   for (let i = 0; i < 30; i += 1) {
-    const start = process.hrtime();
+    const start = performance.now();
 
     // this renders around 64472 divs
     await prepass(<RecursiveDivs depth={5} breadth={11} />);
 
-    time.push(process.hrtime(start));
+    time.push(performance.now() - start);
   }
 
   console.info("================ RESULT ================");
-  const durations = time.map(t => (t[0] + t[1] / 1e9) * 1e3);
+  const durations = time.map(t => (t / 1e9) * 1e3);
 
   durations.forEach((d, i) => {
     console.info(`Run ${i} took `, d, "ms");

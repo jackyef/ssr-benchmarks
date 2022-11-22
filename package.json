@@ -4,7 +4,7 @@
   "description": "Repo to test performance of various SSR approaches",
   "main": "index.js",
   "scripts": {
-    "build:all": "pnpm run build --r",
+    "build:all": "pnpm run --r build",
     "bench:all": "node bench.js && node compile.js > result.md"
   },
   "keywords": [

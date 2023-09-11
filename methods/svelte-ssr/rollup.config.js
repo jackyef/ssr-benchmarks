@@ -1,6 +1,5 @@
 import resolve from "@rollup/plugin-node-resolve";
 import svelte from "rollup-plugin-svelte";
-import commonjs from "@rollup/plugin-commonjs";
 import del from "rollup-plugin-delete";
 
 export default [
@@ -8,18 +7,20 @@ export default [
     input: ["index.js"],
     output: {
       dir: "dist",
-      format: "cjs"
+      format: "esm"
     },
     plugins: [
       del({ targets: "dist/*" }),
-      commonjs(),
-      resolve(),
+      resolve({
+        exportConditions: ['svelte']
+      }),
       svelte({
-        dev: false,
         compilerOptions: {
+          dev: false,
           immutable: true,
           hydratable: true,
-          generate: "ssr"
+          generate: "ssr",
+          enableSourcemap: false
         }
       })
     ],

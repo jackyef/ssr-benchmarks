@@ -56,4 +56,6 @@ The benchmark tests various approaches to see how long it takes for each to rend
 2. We then run the actual benchmark by rendering 30 times
 3. We collect the average time and the standard deviation
 
-Do note that the results are based on runs on my machine, which is an MBP 2020 with Intel i7 and 32GB memory.
+Do note that the results are based on runs on my machine:
+- Ubuntu running on WSL2, Intel i5-12400 with 64GB memory
+- Node version 16.16.0

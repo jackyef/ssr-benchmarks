@@ -1,7 +1,7 @@
 {
   "name": "react-ssr",
   "scripts": {
-    "build": "babel index.jsx -d dist --extensions '.js,.jsx'",
+    "build": "bun build index.jsx --target bun --jsx-runtime classic --outdir dist",
     "bench": "NODE_ENV=production bun dist/index.js"
   },
   "devDependencies": {

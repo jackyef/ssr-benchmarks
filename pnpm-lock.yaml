@@ -263,11 +263,11 @@ importers:
         specifier: ^2.3.0
         version: 2.3.0(eslint@6.8.0)
       react:
-        specifier: ^17
-        version: 17.0.2
+        specifier: ^18
+        version: 18.2.0
       react-dom:
-        specifier: ^17
-        version: 17.0.2(react@17.0.2)
+        specifier: ^18
+        version: 18.2.0(react@18.2.0)
       webpack:
         specifier: ^4.41.6
         version: 4.41.6(webpack-cli@3.3.11)
@@ -354,11 +354,11 @@ importers:
         specifier: ^3.0.3
         version: 3.0.3
       react:
-        specifier: ^17
-        version: 17.0.2
+        specifier: ^18
+        version: 18.2.0
       react-dom:
-        specifier: ^17
-        version: 17.0.2(react@17.0.2)
+        specifier: ^18
+        version: 18.2.0(react@18.2.0)
       webpack:
         specifier: ^4.41.6
         version: 4.41.6(webpack-cli@3.3.11)
@@ -373,7 +373,7 @@ importers:
         version: 1.0.1
       react-ssr-prepass:
         specifier: ^1.5.0
-        version: 1.5.0(react@17.0.2)
+        version: 1.5.0(react@18.2.0)
     devDependencies:
       '@babel/cli':
         specifier: ^7.8.4
@@ -445,11 +445,11 @@ importers:
         specifier: ^2.3.0
         version: 2.5.1(eslint@6.8.0)
       react:
-        specifier: ^17
-        version: 17.0.2
+        specifier: ^18
+        version: 18.2.0
       react-dom:
-        specifier: ^17
-        version: 17.0.2(react@17.0.2)
+        specifier: ^18
+        version: 18.2.0(react@18.2.0)
       webpack:
         specifier: ^4.41.6
         version: 4.42.1
@@ -7168,17 +7168,6 @@ packages:
       safe-buffer: 5.2.0
     dev: true
 
-  /react-dom@17.0.2(react@17.0.2):
-    resolution: {integrity: sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA==}
-    peerDependencies:
-      react: 17.0.2
-    dependencies:
-      loose-envify: 1.4.0
-      object-assign: 4.1.1
-      react: 17.0.2
-      scheduler: 0.20.2
-    dev: true
-
   /react-dom@18.2.0(react@18.2.0):
     resolution: {integrity: sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==}
     peerDependencies:
@@ -7192,12 +7181,12 @@ packages:
   /react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
 
-  /react-ssr-prepass@1.5.0(react@17.0.2):
+  /react-ssr-prepass@1.5.0(react@18.2.0):
     resolution: {integrity: sha512-yFNHrlVEReVYKsLI5lF05tZoHveA5pGzjFbFJY/3pOqqjGOmMmqx83N4hIjN2n6E1AOa+eQEUxs3CgRnPmT0RQ==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
     dependencies:
-      react: 17.0.2
+      react: 18.2.0
     dev: false
 
   /react@16.13.1:
@@ -7209,19 +7198,11 @@ packages:
       prop-types: 15.7.2
     dev: false
 
-  /react@17.0.2:
-    resolution: {integrity: sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA==}
-    engines: {node: '>=0.10.0'}
-    dependencies:
-      loose-envify: 1.4.0
-      object-assign: 4.1.1
-
   /react@18.2.0:
     resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}
     engines: {node: '>=0.10.0'}
     dependencies:
       loose-envify: 1.4.0
-    dev: true
 
   /read-pkg-up@2.0.0:
     resolution: {integrity: sha512-1orxQfbWGUiTn9XsPlChs6rLie/AV9jwZTGmu2NZw/CUDJQchXJFYE0Fq5j7+n558T1JhDWLdhyd1Zj+wLY//w==}
@@ -7558,13 +7539,6 @@ packages:
 
   /safer-buffer@2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
-    dev: true
-
-  /scheduler@0.20.2:
-    resolution: {integrity: sha512-2eWfGgAqqWFGqtdMmcL5zCMK1U8KlXv8SQFGglL3CEtd0aDVDWgeF/YoCmvln55m5zSk3J/20hTaSBeSObsQDQ==}
-    dependencies:
-      loose-envify: 1.4.0
-      object-assign: 4.1.1
     dev: true
 
   /scheduler@0.23.0:

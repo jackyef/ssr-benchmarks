@@ -2,23 +2,22 @@
   "name": "svelte-ssr",
   "version": "1.0.0",
   "description": "simple implementation of svelte-ssr",
+  "type": "module",
   "scripts": {
     "build": "rollup -c",
-    "bench": "NODE_ENV=production node dist/index.js"
+    "bench": "NODE_ENV=production node dist/index.js --experimental-modules"
   },
   "author": "Jacky Efendi",
   "license": "MIT",
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^11.0.2",
     "@rollup/plugin-json": "^4.0.2",
-    "@rollup/plugin-node-resolve": "^7.1.1",
+    "@rollup/plugin-node-resolve": "^15.2.1",
     "@rollup/plugin-replace": "^2.3.1",
-    "node-stdev": "^1.0.1",
-    "rollup": "^1.31.1",
+    "rollup": "^2.78.0",
     "rollup-plugin-delete": "^1.2.0",
-    "rollup-plugin-svelte": "^7.1.0"
+    "rollup-plugin-svelte": "^7.1.5"
   },
   "dependencies": {
-    "svelte": "^3.48.0"
+    "svelte": "^4"
   }
 }

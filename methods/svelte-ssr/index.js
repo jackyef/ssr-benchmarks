@@ -1,4 +1,6 @@
 import RecursiveDivs from './components/RecursiveDivs.svelte';
+import { writeFileSync } from 'fs';
+import { getStandardDevitation } from './stats';
 
 const methodName = 'svelte-ssr';
 
@@ -23,7 +25,7 @@ const benchmark = () => {
     
     time.push(process.hrtime(start));
 
-    require('fs').writeFileSync('./dist/test.html', markup);
+    writeFileSync('./dist/test.html', markup);
 
   }
 
@@ -41,12 +43,12 @@ const benchmark = () => {
     durations.reduce((a, b) => a + b) / durations.length,
     "ms"
   );
-  console.info("Stdev is:", require("node-stdev").population(durations), "ms");
+  console.info("Stdev is:", getStandardDevitation(durations), "ms");
 
-  require('fs').writeFileSync("./dist/result.json", JSON.stringify({
+  writeFileSync("./dist/result.json", JSON.stringify({
     name: methodName,
     average: durations.reduce((a, b) => a + b) / durations.length,
-    stdev: require("node-stdev").population(durations),
+    stdev: getStandardDevitation(durations),
   }));
 };
 

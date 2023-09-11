@@ -4,7 +4,7 @@
   "description": "simple implementation of svelte-ssr",
   "scripts": {
     "build": "rollup -c",
-    "bench": "NODE_ENV=production node dist/index.js"
+    "bench": "NODE_ENV=production bun dist/index.js"
   },
   "author": "Jacky Efendi",
   "license": "MIT",

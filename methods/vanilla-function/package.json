@@ -2,7 +2,7 @@
   "name": "vanilla-function",
   "scripts": {
     "build": "mkdir -p dist && cp index.js dist/index.js",
-    "bench": "NODE_ENV=production node dist/index.js"
+    "bench": "NODE_ENV=production bun dist/index.js"
   },
   "dependencies": {
     "node-stdev": "^1.0.1"

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build:all": "pnpm --filter \"./methods/**\" build",
-    "bench:all": "node bench.js && node compile.js > result.md"
+    "bench:all": "bun bench.js && node compile.js > result.md"
   },
   "keywords": [
     "ssr",

@@ -20,6 +20,6 @@
   },
   "dependencies": {
     "node-stdev": "^1.0.1",
-    "solid-js": "^1.4.4"
+    "solid-js": "^1.7.11"
   }
 }

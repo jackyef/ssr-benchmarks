@@ -9,7 +9,7 @@ const methods = fs.readdirSync('./methods');
  */
 methods.forEach(method => {
   console.info(chalk.blueBright(`Starting benchmark for method '${method}'...`));
-  execSync(`pnpm run bench --filter ${method}`, {
+  execSync(`pnpm --filter ${method} bench`, {
     stdio: 'inherit',
   });
 });

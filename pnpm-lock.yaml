@@ -530,11 +530,11 @@ importers:
         specifier: ^2.3.0
         version: 2.3.0(eslint@6.8.0)
       react:
-        specifier: ^16.12.0
-        version: 16.12.0
+        specifier: ^18
+        version: 18.2.0
       react-dom:
-        specifier: ^16.12.0
-        version: 16.12.0(react@16.12.0)
+        specifier: ^18
+        version: 18.2.0(react@18.2.0)
       webpack:
         specifier: ^4.41.6
         version: 4.41.6(webpack-cli@3.3.11)
@@ -1321,7 +1321,7 @@ packages:
       '@babel/core': ^7.0.0-0
     dependencies:
       '@babel/core': 7.9.0
-      '@babel/helper-plugin-utils': 7.17.12
+      '@babel/helper-plugin-utils': 7.8.3
       '@babel/helper-remap-async-to-generator': 7.8.3
       '@babel/plugin-syntax-async-generators': 7.8.4(@babel/core@7.9.0)
     transitivePeerDependencies:
@@ -7085,6 +7085,16 @@ packages:
       scheduler: 0.19.1
     dev: true
 
+  /react-dom@18.2.0(react@18.2.0):
+    resolution: {integrity: sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==}
+    peerDependencies:
+      react: ^18.2.0
+    dependencies:
+      loose-envify: 1.4.0
+      react: 18.2.0
+      scheduler: 0.23.0
+    dev: true
+
   /react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
 
@@ -7103,6 +7113,7 @@ packages:
       loose-envify: 1.4.0
       object-assign: 4.1.1
       prop-types: 15.7.2
+    dev: true
 
   /react@16.13.1:
     resolution: {integrity: sha512-YMZQQq32xHLX0bz5Mnibv1/LHb3Sqzngu7xstSM+vrkE5Kzr9xE0yMByK5kMoTK30YVJE61WfbxIFFvfeDKT1w==}
@@ -7111,6 +7122,13 @@ packages:
       loose-envify: 1.4.0
       object-assign: 4.1.1
       prop-types: 15.7.2
+
+  /react@18.2.0:
+    resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}
+    engines: {node: '>=0.10.0'}
+    dependencies:
+      loose-envify: 1.4.0
+    dev: true
 
   /read-pkg-up@2.0.0:
     resolution: {integrity: sha512-1orxQfbWGUiTn9XsPlChs6rLie/AV9jwZTGmu2NZw/CUDJQchXJFYE0Fq5j7+n558T1JhDWLdhyd1Zj+wLY//w==}
@@ -7458,6 +7476,12 @@ packages:
     dependencies:
       loose-envify: 1.4.0
       object-assign: 4.1.1
+    dev: true
+
+  /scheduler@0.23.0:
+    resolution: {integrity: sha512-CtuThmgHNg7zIZWAXi3AsyIzA3n4xx7aNyjwC2VJldO2LMVDhFK+63xGqq6CsJH4rTAt6/M+N4GhZiDYPx9eUw==}
+    dependencies:
+      loose-envify: 1.4.0
     dev: true
 
   /schema-utils@0.3.0:
@@ -7994,7 +8018,7 @@ packages:
     dependencies:
       acorn: 6.4.0
       acorn-jsx: 5.1.0(acorn@6.4.0)
-      react: 16.12.0
+      react: 16.13.1
     dev: false
 
   /to-fast-properties@2.0.0:

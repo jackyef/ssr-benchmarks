@@ -6,7 +6,7 @@ let getMean = (data) => {
 
 export const getStandardDevitation = (data) => {
   let m = getMean(data);
-  return Math.sqrt(data.reduce(function (sq, n) {
+  return Number(Math.sqrt(data.reduce(function (sq, n) {
           return sq + Math.pow(n - m, 2);
-      }, 0) / (data.length - 1));
+      }, 0) / (data.length - 1)).toFixed(2));
 };
